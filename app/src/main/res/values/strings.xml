@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">Actividad 2 Miguel Angel</string>
     <string name="mis_tareas">Mis Tareas</string>
+    <string name="password">Password</string>
+    <string name="nombre">Nombre</string>
+    <string name="usuario">UsuariO</string>
+    <string name="login">Login</string>
+    <string name="crear_nuevo_usuario">Crear nuevo Usuario</string>
 </resources>
