@@ -15,4 +15,20 @@
         <item name="android:fontFamily">@font/saiyansans</item>
     </style>
 
+    <style name="etiquetas2">
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="botones">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:fontFamily">@font/saiyansans</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:background">@color/colorAccent</item>
+    </style>
+
 </resources>
