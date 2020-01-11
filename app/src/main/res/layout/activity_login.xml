@@ -15,10 +15,8 @@
 
     <TextView
         android:id="@+id/text2"
-        android:textColor="@color/colorAccent"
+        style="@style/etiquetas"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/saiyansans"
         android:text="@string/mis_tareas"
         android:textSize="70sp"
         android:textAlignment="center"
@@ -35,23 +33,21 @@
 
     <TextView
         android:id="@+id/usu"
+        style="@style/etiquetas"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="35dp"
         android:layout_marginEnd="0dp"
         android:layout_marginBottom="418dp"
-        android:fontFamily="@font/saiyansans"
         android:text="@string/usuario"
         android:textAlignment="center"
-        android:textColor="@color/colorAccent"
         android:textSize="50sp" />
 
     <TextView
         android:id="@+id/crear"
+        style="@style/etiquetas"
         android:layout_width="218dp"
-        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
@@ -59,14 +55,13 @@
         android:layout_marginTop="35dp"
         android:layout_marginEnd="19dp"
         android:layout_marginBottom="184dp"
-        android:fontFamily="@font/saiyansans"
         android:text="@string/crear_nuevo_usuario"
         android:textAlignment="center"
-        android:textColor="@color/colorAccent"
         android:textSize="25sp" />
 
     <TextView
         android:id="@+id/pas"
+        style="@style/etiquetas"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:layout_alignParentEnd="true"
@@ -74,10 +69,8 @@
         android:layout_marginTop="35dp"
         android:layout_marginEnd="0dp"
         android:layout_marginBottom="293dp"
-        android:fontFamily="@font/saiyansans"
         android:text="@string/password"
         android:textAlignment="center"
-        android:textColor="@color/colorAccent"
         android:textSize="50sp" />
 
     <com.google.android.material.textfield.TextInputEditText
