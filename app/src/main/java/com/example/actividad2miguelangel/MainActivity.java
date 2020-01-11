@@ -50,10 +50,10 @@ public class MainActivity extends AppCompatActivity {
             case R.id.action_add_task:
                 final EditText taskEditText = new EditText(this);
                 AlertDialog dialog = new AlertDialog.Builder(this)
-                        .setTitle("Add a new task")
-                        .setMessage("What do you want to do next?")
+                        .setTitle("Añade una tarea")
+                        .setMessage("¿Que quieres hacer?")
                         .setView(taskEditText)
-                        .setPositiveButton("Add", new DialogInterface.OnClickListener() {
+                        .setPositiveButton("Añadir", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 String task = String.valueOf(taskEditText.getText());
@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
                                 updateUI();
                             }
                         })
-                        .setNegativeButton("Cancel", null)
+                        .setNegativeButton("Cancelar", null)
                         .create();
                 dialog.show();
 
