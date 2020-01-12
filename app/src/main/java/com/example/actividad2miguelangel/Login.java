@@ -10,6 +10,8 @@ import android.view.animation.Animation;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.textfield.TextInputEditText;
+
 public class Login extends AppCompatActivity implements Animation.AnimationListener {
 
     @Override
@@ -19,15 +21,28 @@ public class Login extends AppCompatActivity implements Animation.AnimationListe
 
         getSupportActionBar().hide();
 
-        Typeface miFuente = Typeface.createFromAsset(getAssets(),"saiyansans.ttf");
         TextView titulo2 = (TextView) findViewById(R.id.text2);
-
-        titulo2.setTypeface(miFuente);
-    }
+     }
 
     public void crearUsuario (View view){
         Toast toastUsu = Toast.makeText(this,"Funcion no existe", Toast.LENGTH_LONG);
         //Toast.show();
+    }
+
+    public void login (View view){
+        TextInputEditText usuario = (TextInputEditText) findViewById(R.id.textName);
+        TextInputEditText password = (TextInputEditText) findViewById(R.id.textPas);
+
+        if( usuario.getText().toString().equalsIgnoreCase("GOKU")&&
+        password.getText().toString().equals("123")){
+            Intent intent = new Intent (this, MainActivity.class);
+            startActivity(intent);
+        }else{
+
+            Toast toastUsu = Toast.makeText(this,"Comprueba nombre y contraseña", Toast.LENGTH_LONG);
+            //Toast.show();
+        }
+
     }
 
     @Override
