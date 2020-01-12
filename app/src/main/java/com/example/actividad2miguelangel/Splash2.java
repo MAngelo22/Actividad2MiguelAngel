@@ -4,31 +4,34 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.media.Image;
 import android.os.Bundle;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
 import android.widget.TextView;
 
-public class Splash extends AppCompatActivity implements Animation.AnimationListener{
+import com.example.actividad2miguelangel.R;
+
+public class Splash2 extends AppCompatActivity implements Animation.AnimationListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_splash);
+        setContentView(R.layout.activity_splash2);
 
         getSupportActionBar().hide();
 
-        Typeface  miFuente = Typeface.createFromAsset(getAssets(),"saiyansans.ttf");
         TextView titulo = (TextView) findViewById(R.id.text1);
+        ImageView dragonball = (ImageView) findViewById(R.id.esferas);
 
-        titulo.setTypeface(miFuente);
-
+        Animation rotar = AnimationUtils.loadAnimation(this,R.anim.rotar);
         Animation anim = AnimationUtils.loadAnimation(this,R.anim.animacion);
         titulo.startAnimation(anim);
+        dragonball.startAnimation(rotar);
         anim.setAnimationListener(this);
-
+        rotar.setAnimationListener(this);
     }
-
 
     @Override
     public void onAnimationStart(Animation animation) {
@@ -37,8 +40,8 @@ public class Splash extends AppCompatActivity implements Animation.AnimationList
 
     @Override
     public void onAnimationEnd(Animation animation) {
-        Intent intent = new Intent(this, Login.class);
-        startActivity(intent);
+        Intent transicion = new Intent(this,Login.class);
+        startActivity(transicion);
         finish();
     }
 

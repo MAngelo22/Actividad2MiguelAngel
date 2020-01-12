@@ -57,7 +57,8 @@
         android:layout_marginBottom="184dp"
         android:text="@string/crear_nuevo_usuario"
         android:textAlignment="center"
-        android:textSize="25sp" />
+        android:textSize="25sp"
+        android:onClick="crearUsuario"/>
 
     <TextView
         android:id="@+id/pas"

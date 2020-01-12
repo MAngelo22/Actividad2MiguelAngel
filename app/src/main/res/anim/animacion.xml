@@ -4,8 +4,8 @@
     <!-- Animacion para Splash, text1-->
 
     <translate
-        android:fromYDelta = "500"
-        android:duration = "5000" />
+        android:fromYDelta = "400"
+        android:duration = "2000" />
 
     <alpha
         android:duration = "2000"
