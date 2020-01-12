@@ -25,8 +25,10 @@ public class Login extends AppCompatActivity implements Animation.AnimationListe
      }
 
     public void crearUsuario (View view){
-        Toast toastUsu = Toast.makeText(this,"Funcion no existe", Toast.LENGTH_LONG);
+        //Toast toastUsu = Toast.makeText(this,"Funcion no existe", Toast.LENGTH_LONG);
         //Toast.show();
+        Intent cambioUs = new Intent (this, LoginNew.class);
+        startActivity(cambioUs);
     }
 
     public void login (View view){
@@ -52,9 +54,7 @@ public class Login extends AppCompatActivity implements Animation.AnimationListe
 
     @Override
     public void onAnimationEnd(Animation animation) {
-        Intent cambio = new Intent (Login.this,MainActivity.class);
-        //Meto contaseña y usuario
-        //startActivity(cambio);
+
     }
 
     @Override
