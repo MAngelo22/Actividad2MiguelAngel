@@ -39,7 +39,7 @@
         android:layout_marginStart="46dp"
         android:layout_marginBottom="363dp"
         android:hint="hint"
-        android:text="@string/nombre"
+        android:text="GOku"
         android:textSize="30sp" />
 
 
@@ -94,7 +94,7 @@
         android:layout_marginBottom="272dp"
         android:hint="hint"
         android:inputType="textPassword"
-        android:text="@string/password"
+        android:text="123"
         android:textSize="30sp" />
 
     <TextView

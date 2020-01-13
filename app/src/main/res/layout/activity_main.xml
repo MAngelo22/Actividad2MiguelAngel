@@ -8,12 +8,12 @@
 
     <ImageView
         android:id="@+id/CCorp"
-        android:layout_width="411dp"
-        android:layout_height="728dp"
+        android:layout_width="match_parent"
+        android:layout_height="618dp"
         android:src="@drawable/cc"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="-2dp"
-        tools:ignore="MissingConstraints" />
+        tools:layout_editor_absoluteY="-2dp" />
 
     <ListView
         android:id="@+id/list_todo"

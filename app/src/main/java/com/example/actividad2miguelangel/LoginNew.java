@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 public class LoginNew extends AppCompatActivity {
 
@@ -16,7 +17,10 @@ public class LoginNew extends AppCompatActivity {
         getSupportActionBar().hide();
     }
 
-    public void Crear(View view) {}
+    public void Crear(View view) {
+        Toast toastNewUsu = Toast.makeText(this, "Usuario creado correctamente", Toast.LENGTH_LONG);
+        toastNewUsu.show();
+    }
 
     public void Cambio(View view) {
         Intent cambio = new Intent(this, Login.class);

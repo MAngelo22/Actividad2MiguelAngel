@@ -25,8 +25,7 @@ public class Login extends AppCompatActivity implements Animation.AnimationListe
      }
 
     public void crearUsuario (View view){
-        //Toast toastUsu = Toast.makeText(this,"Funcion no existe", Toast.LENGTH_LONG);
-        //Toast.show();
+
         Intent cambioUs = new Intent (this, LoginNew.class);
         startActivity(cambioUs);
     }
@@ -34,6 +33,8 @@ public class Login extends AppCompatActivity implements Animation.AnimationListe
     public void login (View view){
         TextInputEditText usuario = (TextInputEditText) findViewById(R.id.textName);
         TextInputEditText password = (TextInputEditText) findViewById(R.id.textPas);
+        usuario.getText().toString().replace("","");
+        password.getText().toString().replace("","");
 
         if( usuario.getText().toString().equalsIgnoreCase("GOKU")&&
         password.getText().toString().equals("123")){
@@ -42,7 +43,7 @@ public class Login extends AppCompatActivity implements Animation.AnimationListe
         }else{
 
             Toast toastUsu = Toast.makeText(this,"Comprueba nombre y contraseña", Toast.LENGTH_LONG);
-            //Toast.show();
+            toastUsu.show();
         }
 
     }
