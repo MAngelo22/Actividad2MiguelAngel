@@ -19,6 +19,23 @@ public class Login extends AppCompatActivity implements Animation.AnimationListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        final TextView textName = (TextView) findViewById(R.id.textName);
+        final TextView textPassword = (TextView) findViewById(R.id.textPas);
+
+        //Aqui hago un onclick escuchando a la funcion de vaciar
+        textName.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View vista){
+                vaciar(textName);
+            }
+        });
+        textPassword.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View vista){
+                vaciar(textPassword);
+            }
+        });
+
         getSupportActionBar().hide();
 
         TextView titulo2 = (TextView) findViewById(R.id.text2);
@@ -28,6 +45,10 @@ public class Login extends AppCompatActivity implements Animation.AnimationListe
 
         Intent cambioUs = new Intent (this, LoginNew.class);
         startActivity(cambioUs);
+    }
+
+    public void vaciar(TextView tv){
+        tv.setText("");
     }
 
     public void login (View view){

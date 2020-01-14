@@ -9,6 +9,7 @@
     <ImageView
         android:id="@+id/lapiz"
         android:layout_width="43dp"
+        android:onClick="updateTask"
         android:layout_height="49dp"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="104dp"

@@ -5,14 +5,17 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.content.DialogInterface;
+import android.widget.AdapterView;
 import android.widget.EditText;
 import android.database.sqlite.SQLiteDatabase;
 import android.content.ContentValues;
 import android.widget.ArrayAdapter;
 import android.database.Cursor;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,6 +30,9 @@ public class MainActivity extends AppCompatActivity {
     private ListView mTaskListView;
     private ArrayAdapter<String> mAdapter;
 
+//    ImageView Lapiz = findViewById(R.id.lapiz);
+//    TextView Tarea = findViewById(R.id.task_title);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +40,10 @@ public class MainActivity extends AppCompatActivity {
 
         mHelper = new TaskDbHelper(this);
         mTaskListView = (ListView) findViewById(R.id.list_todo);
+
+//        public void Rename(TextView Tarea);{
+//            Tarea.setText(Teclado);
+//        }
 
         updateUI();
     }
@@ -43,11 +53,6 @@ public class MainActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.main_menu, menu);
         return super.onCreateOptionsMenu(menu);
     }
-
-    /*
-    public void rename (){
-
-    }*/
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -82,6 +87,35 @@ public class MainActivity extends AppCompatActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+
+    public void updateTask(View view) {
+        View parent = (View) view.getParent();
+        TextView taskTextView = (TextView) parent.findViewById(R.id.task_title);
+        final String task = String.valueOf(taskTextView.getText());
+        final EditText nombreTareaEditado = new EditText(this);
+        AlertDialog dialog = new AlertDialog.Builder(this)
+                .setTitle("Modifica la tarea")
+                .setMessage("¿Que quieres hacer?")
+                .setView(nombreTareaEditado)
+                .setPositiveButton("Modificar", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        String nuevoNombreTarea = String.valueOf(nombreTareaEditado.getText());
+                        SQLiteDatabase db = mHelper.getWritableDatabase();
+                        ContentValues values = new ContentValues();
+                        values.put(TaskContract.TaskEntry.COL_TASK_TITLE, nuevoNombreTarea);
+                        db.update(TaskContract.TaskEntry.TABLE,
+                                values,
+                                TaskContract.TaskEntry.COL_TASK_TITLE + " = ?",
+                                new String[]{task});
+                        db.close();
+                        updateUI();
+                    }
+                })
+                .setNegativeButton("Cancelar", null)
+                .create();
+        dialog.show();
     }
 
     public void deleteTask(View view) {

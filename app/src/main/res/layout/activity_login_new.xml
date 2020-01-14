@@ -7,6 +7,7 @@
     tools:context=".LoginNew">
 
     <pl.droidsonroids.gif.GifImageView
+        android:id="@id/shenron"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:background="@android:color/darker_gray"
@@ -19,10 +20,9 @@
         android:layout_height="437dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="37dp"
+        android:layout_marginTop="48dp"
         android:layout_marginEnd="-6dp"
         android:src="@drawable/filtro" />
-
 
     <TextView
         android:id="@+id/usu"
@@ -66,22 +66,8 @@
         android:background="@drawable/boton"
         android:onClick="Crear"
         android:text="Crear Usuario"
-        android:textSize="30sp" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/textName"
-        style="@style/etiquetas2"
-        android:layout_width="353dp"
-        android:layout_height="57dp"
-        android:layout_alignTop="@+id/usu"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="29dp"
-        android:layout_marginTop="130dp"
-        android:layout_marginBottom="412dp"
-        android:hint="hint"
-        android:text="@string/nombre"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        tools:ignore="OnClick" />
 
     <Button
         android:id="@+id/Back"
@@ -110,6 +96,18 @@
         android:hint="hint"
         android:inputType="textPassword"
         android:text="@string/password"
+        android:textSize="30sp" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/textName"
+        style="@style/etiquetas2"
+        android:layout_width="335dp"
+        android:layout_marginStart="43dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="419dp"
+        android:inputType="text"
+        android:text="@string/nombre"
         android:textSize="30sp" />
 
 </RelativeLayout>
