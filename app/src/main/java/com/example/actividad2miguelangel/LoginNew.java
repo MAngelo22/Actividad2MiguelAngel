@@ -12,8 +12,6 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
-
 public class LoginNew extends AppCompatActivity {
 
     Button BtnCrear;
@@ -56,7 +54,7 @@ public class LoginNew extends AppCompatActivity {
 
     public void Crear() {
         LayoutInflater inflater = getLayoutInflater();
-        View view = inflater.inflate(R.layout.capatoastcrear, null);
+        View view = inflater.inflate(R.layout.toastnewusu, null);
         Toast toastNewUsu = new Toast (this);
         toastNewUsu.setDuration(Toast.LENGTH_LONG);
         toastNewUsu.setGravity(Gravity.CENTER_HORIZONTAL|Gravity.BOTTOM, 0, 0);
