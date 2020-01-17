@@ -50,8 +50,7 @@ public class MainActivity extends AppCompatActivity {
     //Funcion añadir tarea
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        Toast toastcrear = Toast.makeText(this,"Tarea añadida",Toast.LENGTH_SHORT);
-        switch (item.getItemId()) {
+            switch (item.getItemId()) {
             case R.id.action_add_task:
                 final EditText taskEditText = new EditText(this);
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -69,11 +68,23 @@ public class MainActivity extends AppCompatActivity {
                                 null,
                                 values,
                                 SQLiteDatabase.CONFLICT_REPLACE);
+
+                        LayoutInflater inflater = getLayoutInflater();
+                        View view2 = inflater.inflate(R.layout.toastcreartarea, null);
+                        Toast toastcrear = new Toast (getApplicationContext());
+                        toastcrear.setDuration(Toast.LENGTH_LONG);
+                        toastcrear.setGravity(Gravity.CENTER_HORIZONTAL|Gravity.BOTTOM, 0, 0);
+                        toastcrear.setView(view2);
+
+                        MediaPlayer Sonido1 = MediaPlayer.create(getApplicationContext(), R.raw.sonidoshenron);
+
+                        toastcrear.show();
+
+                        Sonido1.start();
+
                         db.close();
                         updateUI();
 
-                        //Toast toastcrear = Toast.makeText(this,"Tarea añadida",Toast.LENGTH_SHORT);
-                       // toastcrear.show();
                     }
                 }).setNegativeButton("Cancelar", null);
                 AlertDialog dialog = builder
@@ -136,8 +147,8 @@ public class MainActivity extends AppCompatActivity {
         toastacabar.setView(view2);
         toastacabar.show();
 
-        MediaPlayer Sonido1 = MediaPlayer.create(this, R.raw.sonidoshenron);
-        Sonido1.start();
+        MediaPlayer Sonido2 = MediaPlayer.create(this, R.raw.fin);
+        Sonido2.start();
 
         db.close();
         updateUI();

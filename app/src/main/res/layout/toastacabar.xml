@@ -18,7 +18,7 @@
         android:layout_marginBottom="360dp"
         android:background="@android:color/darker_gray"
         android:scaleType="fitXY"
-        android:src="@drawable/deseo" />
+        android:src="@drawable/fin" />
 
     <TextView
         android:id="@+id/textView"

@@ -38,5 +38,4 @@
         android:textAlignment="center"
         android:textSize="40dp" />
 
-
 </RelativeLayout>
