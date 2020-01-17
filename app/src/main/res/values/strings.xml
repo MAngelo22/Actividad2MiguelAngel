@@ -6,4 +6,6 @@
     <string name="usuario">UsuariO</string>
     <string name="login">Login</string>
     <string name="crear_nuevo_usuario">Crear nuevo Usuario</string>
+    <string name="nuevo_usuario_creado">Nuevo usuario creado</string>
+    <string name="nueva_tarea_agregada">Nueva Tarea Agregada</string>
 </resources>

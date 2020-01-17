@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,42 +7,57 @@
     tools:context=".Login">
 
     <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gifImageView4"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:background="@android:color/darker_gray"
         android:scaleType="fitXY"
-        android:src="@drawable/shenron" />
+        android:src="@drawable/shenron"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="16dp" />
 
     <ImageView
+        android:id="@+id/imageView2"
         android:layout_width="359dp"
         android:layout_height="263dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginTop="174dp"
-        android:layout_marginEnd="22dp"
-        android:src="@drawable/filtro" />
+        android:src="@drawable/filtro"
+        app:layout_constraintBottom_toBottomOf="@+id/gifImageView4"
+        app:layout_constraintEnd_toEndOf="@+id/gifImageView4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/text2tareas"
         style="@style/etiquetas"
         android:layout_width="match_parent"
         android:text="@string/mis_tareas"
-        android:textSize="70sp"
         android:textAlignment="center"
-        android:layout_marginTop="35dp"/>
+        android:textSize="70sp"
+        app:layout_constraintBottom_toBottomOf="@+id/gifImageView4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.198"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
+
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/textName"
         style="@style/etiquetas2"
         android:layout_width="333dp"
         android:layout_height="74dp"
-        android:layout_marginStart="46dp"
-        android:layout_marginBottom="363dp"
         android:hint="hint"
         android:text="GOku"
-        android:textSize="30sp" />
-
-
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.512"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.471"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/usu"
@@ -50,12 +65,14 @@
         android:layout_width="match_parent"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="35dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="419dp"
         android:text="@string/usuario"
         android:textAlignment="center"
-        android:textSize="50sp" />
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="@+id/gifImageView4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.409"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
 
     <TextView
         android:id="@+id/pas"
@@ -64,38 +81,47 @@
         android:layout_height="80dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="35dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="286dp"
         android:text="@string/password"
         android:textAlignment="center"
-        android:textSize="50sp" />
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.563"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp" />
 
     <Button
         android:id="@+id/buttonLogin"
         style="@style/botones"
-        android:onClick="login"
         android:layout_width="309dp"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="54dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginBottom="224dp"
+        android:background="@drawable/boton"
+        android:onClick="login"
         android:text="@string/login"
         android:textSize="30sp"
-        android:background="@drawable/boton"/>
+        app:layout_constraintBottom_toBottomOf="@+id/gifImageView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.695"
+        tools:ignore="MissingConstraints" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/textPas"
         style="@style/etiquetas2"
         android:layout_width="335dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="43dp"
-        android:layout_marginBottom="272dp"
         android:hint="hint"
         android:inputType="textPassword"
         android:text="123"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gifImageView4"
+        app:layout_constraintVertical_bias="0.617"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/crear"
@@ -104,14 +130,16 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="174dp"
-        android:layout_marginTop="35dp"
-        android:layout_marginEnd="19dp"
-        android:layout_marginBottom="191dp"
         android:onClick="crearUsuario"
         android:text="@string/crear_nuevo_usuario"
         android:textAlignment="center"
         android:textSize="25sp"
-        />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.757"
+        tools:ignore="MissingConstraints" />
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
