@@ -68,12 +68,12 @@ public class Login extends AppCompatActivity implements Animation.AnimationListe
 
         SQLiteDatabase db2 = mHelper.getReadableDatabase();
         String[] args = new String[]{usuario.getText().toString()};
-        //db.query("Usuarios", campos, "usuario=?", args, null, null, null);
         Cursor cursor = db2.query(UsersContract.TaskEntry.TABLE,
                 new String[]{UsersContract.TaskEntry.NOMBRE_USUARIO, UsersContract.TaskEntry.PASSWORD_USUARIO},
                 "name=?", args, null, null, null);
+
         // El metodo moveToNext() entra en funcionamiento cada vez que tu consulta o query, devuelve un resultado
-        // Esto significa que cuando pones GOku y no esta en base de datos, no va a hacer nada, ya que la logica de dentro solo actuara
+        // Cuando un usuario no esta en la base de datos, no va a hacer nada, ya que la logica de dentro solo actuara
         // Cuando se devuelva algo de tu select
 
         if (cursor.getCount() == 0) {
