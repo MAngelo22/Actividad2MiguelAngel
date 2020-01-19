@@ -49,14 +49,14 @@
         android:layout_width="333dp"
         android:layout_height="74dp"
         android:hint="hint"
-        android:text="GOku"
+        android:text="Doble clic"
         android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.512"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.471"
+        app:layout_constraintVertical_bias="0.445"
         tools:ignore="MissingConstraints" />
 
     <TextView
@@ -70,7 +70,7 @@
         android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="@+id/gifImageView4"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.409"
+        app:layout_constraintVertical_bias="0.375"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp" />
 
